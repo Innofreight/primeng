@@ -115,7 +115,7 @@ export class Slider implements OnDestroy,ControlValueAccessor {
         this.dragging = true;
         this.updateDomData();
         this.sliderHandleClick = true;
-        if (this.range && this.handleValues && this.handleValues[0] === this.max) {
+        if (this.range && this.handleValues && this.handleValues[0] === 100) {
             this.handleIndex = 0;
         }
         else {
@@ -139,7 +139,7 @@ export class Slider implements OnDestroy,ControlValueAccessor {
         var touchobj = event.changedTouches[0];
         this.startHandleValue = (this.range) ? this.handleValues[index] : this.handleValue;
         this.dragging = true;
-        if (this.range && this.handleValues && this.handleValues[0] === this.max) {
+        if (this.range && this.handleValues && this.handleValues[0] === 100) {
             this.handleIndex = 0;
         }
         else {
